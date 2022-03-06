@@ -5,6 +5,9 @@ A simple but full featured flexbox grid Package for Neos CMS. The Grid is using 
 ## Why this package?
 There are already numerous Neos packages for creating a grid. However, the packages we tested didn't meet all of our needs. This package can be used to create a grid with features listed below. The settings are numerous, but do not have to be made if the use case has to be simple.
 
+## Preview
+![Preview](.github/preview.png?raw=true "Preview")
+
 ## Features
 Geopard.FlexGrid allows different column sizes to be specified for xs, sm, md, and lg viewports. All following features can be configurated for every available viewport in the neos backend.
 - Auto Sizing
