@@ -7,7 +7,7 @@ There are already numerous Neos packages for creating a grid. However, the packa
 
 ## Preview
 ![Preview](.github/preview.png?raw=true "Preview")
-*Note that the paddings shown in this preview are only for demo purposes.
+*Note that the paddings and colors shown in this preview are only for demo purposes.
 
 ## Features
 Geopard.FlexGrid allows different column sizes to be specified for xs, sm, md, and lg viewports. All following features can be configurated for every available viewport in the neos backend.
