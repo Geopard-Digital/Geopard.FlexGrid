@@ -1,0 +1,100 @@
+Geopard.FlexGrid:Mixin.Column.Order:
+  abstract: true
+  superTypes:
+    Geopard.FlexGrid:Mixin.Column.Order.XS: true
+    Geopard.FlexGrid:Mixin.Column.Order.SM: true
+    Geopard.FlexGrid:Mixin.Column.Order.MD: true
+    Geopard.FlexGrid:Mixin.Column.Order.LG: true
+
+Geopard.FlexGrid:Mixin.Column.Order.Group:
+  abstract: true
+  ui:
+    inspector:
+      groups:
+        order:
+          label: 'Geopard.FlexGrid:NodeTypes.Content.Column:groups.order'
+          collapsed: true
+
+Geopard.FlexGrid:Mixin.Column.Order.XS:
+  abstract: true
+  superTypes:
+    Geopard.FlexGrid:Mixin.Column.Order.Group: true
+  properties:
+    order:
+      type: string
+      ui:
+        label: 'Geopard.FlexGrid:Main:size.xs'
+        reloadIfChanged: true
+        inspector:
+          group: 'order'
+          editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
+          editorOptions:
+            allowEmpty: true
+            values:
+              flexgrid-first-xs:
+                label: 'First'
+              flexgrid-last-xs:
+                label: 'Last'
+
+Geopard.FlexGrid:Mixin.Column.Order.SM:
+  abstract: true
+  superTypes:
+    Geopard.FlexGrid:Mixin.Column.Order.Group: true
+  properties:
+    order-sm:
+      type: string
+      ui:
+        label: 'Geopard.FlexGrid:Main:size.sm'
+        reloadIfChanged: true
+        inspector:
+          group: 'order'
+          editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
+          editorOptions:
+            allowEmpty: true
+            values:
+              flexgrid-first-sm:
+                label: 'First'
+              flexgrid-last-sm:
+                label: 'Last'
+
+Geopard.FlexGrid:Mixin.Column.Order.MD:
+  abstract: true
+  superTypes:
+    Geopard.FlexGrid:Mixin.Column.Order.Group: true
+  properties:
+    order-md:
+      type: string
+      ui:
+        label: 'Geopard.FlexGrid:Main:size.md'
+        reloadIfChanged: true
+        inspector:
+          group: 'order'
+          editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
+          editorOptions:
+            allowEmpty: true
+            values:
+              flexgrid-first-md:
+                label: 'First'
+              flexgrid-last-md:
+                label: 'Last'
+
+Geopard.FlexGrid:Mixin.Column.Order.LG:
+  abstract: true
+  superTypes:
+    Geopard.FlexGrid:Mixin.Column.Order.Group: true
+  properties:
+    order-lg:
+      type: string
+      ui:
+        label: 'Geopard.FlexGrid:Main:size.lg'
+        reloadIfChanged: true
+        inspector:
+          group: 'order'
+          editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
+          editorOptions:
+            allowEmpty: true
+            values:
+              flexgrid-first-lg:
+                label: 'First'
+              flexgrid-last-lg:
+                label: 'Last'

@@ -1,0 +1,13 @@
+Neos:
+  Neos:
+    userInterface:
+      translation:
+        autoInclude:
+          Geopard.FlexGrid: ['Main', 'NodeTypes/*']
+    fusion:
+      autoInclude:
+        Geopard.FlexGrid: true
+
+Geopard:
+  FlexGrid:
+    includeCss: true

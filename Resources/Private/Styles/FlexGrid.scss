@@ -1,0 +1,38 @@
+@charset "UTF-8";
+/*!
+Project: FlexGrid
+Author: Rene Rehme
+Filename: FlexGrid.scss
+Compiled file: FlexGrid.min.css
+SCSS Settings: --no-cache --update --style compressed --sourcemap=none $FileName$:../../Public/Styles/$FileNameWithoutExtension$.min.css
+---
+Inspired from:
+- https://github.com/kristoferjoseph/flexboxgrid
+- https://github.com/hugeinc/flexboxgrid-sass
+- https://github.com/mastastealth/sass-flex-mixin
+- https://philipwalton.github.io/solved-by-flexbox/demos/grids/
+*/
+
+/*
+### SETTINGS ###
+*/
+// Set the number of columns
+$columns: 12 !default;
+
+// Set the gutter between columns
+$gutter-width: 1rem !default;
+
+// Set a margin for the outer container
+$outer-margin: 0.5rem !default;
+
+// max width container size
+$max-width: 1200px !default;
+
+// possible breakpoints (name, min-width for media query, container width)
+// "xs" is default, you don't need to add it.
+$breakpoints: sm 48em 46rem, md 62em 61rem, lg 75em 71rem !default;
+
+/*
+### IMPORT PARTIALS ###
+*/
+@import 'partials/flex', 'partials/grid';

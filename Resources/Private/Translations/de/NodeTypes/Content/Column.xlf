@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file original="" product-name="Geopard.FlexGrid" source-language="de" datatype="plaintext">
+        <body>
+            <trans-unit id="ui.label" xml:space="preserve">
+                <source>Spalte</source>
+            </trans-unit>
+            <trans-unit id="groups.width" xml:space="preserve">
+                <source>Breite</source>
+            </trans-unit>
+            <trans-unit id="groups.offset" xml:space="preserve">
+                <source>Spalte versetzen</source>
+            </trans-unit>
+            <trans-unit id="groups.order" xml:space="preserve">
+                <source>Spalten Reihenfolge</source>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

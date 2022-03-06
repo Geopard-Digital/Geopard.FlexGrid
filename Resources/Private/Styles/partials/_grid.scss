@@ -1,0 +1,208 @@
+$gutter-comp: $gutter-width * .5 * -1;
+$half-gutter-width: $gutter-width * .5;
+
+@mixin col-common {
+  box-sizing: border-box;
+  @include flex-grow(0);
+  @include flex-shrink(0);
+  padding-right: $half-gutter-width;
+  padding-left: $half-gutter-width;
+}
+
+.flexgrid-wrapper {
+  box-sizing: border-box;
+  max-width: $max-width;
+  margin: 0 auto;
+}
+
+.flexgrid-container-fluid {
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: $outer-margin;
+  padding-left: $outer-margin;
+}
+
+.flexgrid-row {
+  box-sizing: border-box;
+  @include flexbox();
+  @include flex(0, 1, auto);
+  @include flex-direction(row);
+  @include flex-wrap(wrap);
+  margin-right: $gutter-comp;
+  margin-left: $gutter-comp;
+}
+
+.flexgrid-row.reverse {
+  @include flex-direction(row-reverse);
+}
+
+.flexgrid-col.reverse {
+  @include flex-direction(column-reverse);
+}
+
+$name: xs;
+.flexgrid-col-#{$name} {
+  @include col-common;
+  @include flex-basis(auto);
+}
+
+@for $i from 1 through $columns {
+  .flexgrid-col-#{$name}-#{$i} {
+    @include col-common;
+    @include flex-basis(100% / $columns * $i);
+    max-width: 100% / $columns * $i;
+  }
+}
+
+@for $i from 0 through $columns {
+  .flexgrid-col-#{$name}-offset-#{$i} {
+    @include col-common;
+    @if $i == 0 {
+      margin-left: 0;
+    } @else {
+      margin-left: 100% / $columns * $i;
+    }
+  }
+}
+
+.flexgrid-col-#{$name} {
+  @include flex-grow(1);
+  @include flex-basis(0);
+  max-width: 100%;
+}
+
+.flexgrid-start-#{$name} {
+  @include justify-content(flex-start);
+  text-align: left;
+}
+
+.flexgrid-center-#{$name} {
+  @include justify-content(center);
+  text-align: center;
+}
+
+.flexgrid-end-#{$name} {
+  @include justify-content(flex-end);
+  text-align: right;
+}
+
+.flexgrid-top-#{$name} {
+  @include align-items(flex-start);
+}
+
+.flexgrid-middle-#{$name} {
+  @include align-items(center);
+}
+
+.flexgrid-bottom-#{$name} {
+  @include align-items(flex-end);
+}
+
+.flexgrid-around-#{$name} {
+  @include justify-content(space-around);
+}
+
+.flexgrid-between-#{$name} {
+  @include justify-content(space-between);
+}
+
+.flexgrid-first-#{$name} {
+  order: -1;
+}
+
+.flexgrid-last-#{$name} {
+  order: 1;
+}
+
+@each $breakpoint in $breakpoints {
+  $name: nth($breakpoint, 1);
+  $size: nth($breakpoint, 2);
+  $container: nth($breakpoint, 3);
+  /*
+   Since I use the approach of @hugeinc (flexboxgrid-sass) here,
+   I noticed that first-* classes are not interpreted correctly
+   because "order: -1" is used for all prefix classes. Accordingly,
+   e.g. on the md view, the .first-md class is not interpreted but .first-xs.
+   Fixed in this project trough an iterator ($i), which counts the "order" down for the prefixes.
+  */
+  $i: index($breakpoints, $breakpoint) + 1;
+
+  @media only screen and (min-width: $size) {
+    .flexgrid-container {
+      width: $container;
+    }
+
+    .flexgrid-col-#{$name} {
+      @include col-common;
+      @include flex-basis(auto);
+    }
+
+    @for $i from 1 through $columns {
+      .flexgrid-col-#{$name}-#{$i} {
+        @include col-common;
+        @include flex-basis(100% / $columns * $i);
+        max-width: 100% / $columns * $i;
+      }
+    }
+
+    @for $i from 0 through $columns {
+      .flexgrid-col-#{$name}-offset-#{$i} {
+        @include col-common;
+        @if $i == 0 {
+          margin-left: 0;
+        } @else {
+          margin-left: 100% / $columns * $i;
+        }
+      }
+    }
+
+    .flexgrid-col-#{$name} {
+      @include flex-grow(1);
+      @include flex-basis(0);
+      max-width: 100%;
+    }
+
+    .flexgrid-start-#{$name} {
+      @include justify-content(flex-start);
+      text-align: left;
+    }
+
+    .flexgrid-center-#{$name} {
+      @include justify-content(center);
+      text-align: center;
+    }
+
+    .flexgrid-end-#{$name} {
+      @include justify-content(flex-end);
+      text-align: right;
+    }
+
+    .flexgrid-top-#{$name} {
+      @include align-items(flex-start);
+    }
+
+    .flexgrid-middle-#{$name} {
+      @include align-items(center);
+    }
+
+    .flexgrid-bottom-#{$name} {
+      @include align-items(flex-end);
+    }
+
+    .flexgrid-around-#{$name} {
+      @include justify-content(space-around);
+    }
+
+    .flexgrid-between-#{$name} {
+      @include justify-content(space-between);
+    }
+
+    .flexgrid-first-#{$name} {
+      order: -#{$i};
+    }
+
+    .flexgrid-last-#{$name} {
+      order: 1;
+    }
+  }
+}

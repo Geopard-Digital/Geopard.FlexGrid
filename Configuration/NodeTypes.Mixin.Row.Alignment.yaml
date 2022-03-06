@@ -1,0 +1,233 @@
+Geopard.FlexGrid:Mixin.Row.AlignmentVertical:
+  abstract: true
+  superTypes:
+    Geopard.FlexGrid:Mixin.Row.AlignmentVertical.XS: true
+    Geopard.FlexGrid:Mixin.Row.AlignmentVertical.SM: true
+    Geopard.FlexGrid:Mixin.Row.AlignmentVertical.MD: true
+    Geopard.FlexGrid:Mixin.Row.AlignmentVertical.LG: true
+
+Geopard.FlexGrid:Mixin.Row.AlignmentHorizontal:
+  abstract: true
+  superTypes:
+    Geopard.FlexGrid:Mixin.Row.AlignmentHorizontal.XS: true
+    Geopard.FlexGrid:Mixin.Row.AlignmentHorizontal.SM: true
+    Geopard.FlexGrid:Mixin.Row.AlignmentHorizontal.MD: true
+    Geopard.FlexGrid:Mixin.Row.AlignmentHorizontal.LG: true
+
+Geopard.FlexGrid:Mixin.Row.AlignmentVertical.Group:
+  abstract: true
+  ui:
+    inspector:
+      groups:
+        alignmentVertical:
+          label: 'Geopard.FlexGrid:NodeTypes.Content.Row:groups.alignmentVertical'
+          collapsed: true
+
+Geopard.FlexGrid:Mixin.Row.AlignmentHorizontal.Group:
+  abstract: true
+  ui:
+    inspector:
+      groups:
+        alignmentHorizontal:
+          label: 'Geopard.FlexGrid:NodeTypes.Content.Row:groups.alignmentHorizontal'
+          collapsed: true
+
+Geopard.FlexGrid:Mixin.Row.AlignmentVertical.XS:
+  abstract: true
+  superTypes:
+    Geopard.FlexGrid:Mixin.Row.AlignmentVertical.Group: true
+  properties:
+    alignmentVertical:
+      type: string
+      ui:
+        label: 'Geopard.FlexGrid:Main:size.xs'
+        reloadIfChanged: true
+        inspector:
+          group: 'alignmentVertical'
+          editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
+          editorOptions:
+            allowEmpty: true
+            values:
+              middle:
+                label: 'Geopard.FlexGrid:NodeTypes.Content.Row:properties.alignmentVertical.selectBoxEditor.values.middle'
+              top:
+                label: 'Geopard.FlexGrid:NodeTypes.Content.Row:properties.alignmentVertical.selectBoxEditor.values.top'
+              bottom:
+                label: 'Geopard.FlexGrid:NodeTypes.Content.Row:properties.alignmentVertical.selectBoxEditor.values.bottom'
+
+Geopard.FlexGrid:Mixin.Row.AlignmentVertical.SM:
+  abstract: true
+  superTypes:
+    Geopard.FlexGrid:Mixin.Row.AlignmentVertical.Group: true
+  properties:
+    alignmentVertical-sm:
+      type: string
+      ui:
+        label: 'Geopard.FlexGrid:Main:size.sm'
+        reloadIfChanged: true
+        inspector:
+          group: 'alignmentVertical'
+          editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
+          editorOptions:
+            allowEmpty: true
+            values:
+              middle:
+                label: 'Geopard.FlexGrid:NodeTypes.Content.Row:properties.alignmentVertical.selectBoxEditor.values.middle'
+              top:
+                label: 'Geopard.FlexGrid:NodeTypes.Content.Row:properties.alignmentVertical.selectBoxEditor.values.top'
+              bottom:
+                label: 'Geopard.FlexGrid:NodeTypes.Content.Row:properties.alignmentVertical.selectBoxEditor.values.bottom'
+
+Geopard.FlexGrid:Mixin.Row.AlignmentVertical.MD:
+  abstract: true
+  superTypes:
+    Geopard.FlexGrid:Mixin.Row.AlignmentVertical.Group: true
+  properties:
+    alignmentVertical-md:
+      type: string
+      ui:
+        label: 'Geopard.FlexGrid:Main:size.md'
+        reloadIfChanged: true
+        inspector:
+          group: 'alignmentVertical'
+          editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
+          editorOptions:
+            allowEmpty: true
+            values:
+              middle:
+                label: 'Geopard.FlexGrid:NodeTypes.Content.Row:properties.alignmentVertical.selectBoxEditor.values.middle'
+              top:
+                label: 'Geopard.FlexGrid:NodeTypes.Content.Row:properties.alignmentVertical.selectBoxEditor.values.top'
+              bottom:
+                label: 'Geopard.FlexGrid:NodeTypes.Content.Row:properties.alignmentVertical.selectBoxEditor.values.bottom'
+
+Geopard.FlexGrid:Mixin.Row.AlignmentVertical.LG:
+  abstract: true
+  superTypes:
+    Geopard.FlexGrid:Mixin.Row.AlignmentVertical.Group: true
+  properties:
+    alignmentVertical-lg:
+      type: string
+      ui:
+        label: 'Geopard.FlexGrid:Main:size.lg'
+        reloadIfChanged: true
+        inspector:
+          group: 'alignmentVertical'
+          editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
+          editorOptions:
+            allowEmpty: true
+            values:
+              middle:
+                label: 'Geopard.FlexGrid:NodeTypes.Content.Row:properties.alignmentVertical.selectBoxEditor.values.middle'
+              top:
+                label: 'Geopard.FlexGrid:NodeTypes.Content.Row:properties.alignmentVertical.selectBoxEditor.values.top'
+              bottom:
+                label: 'Geopard.FlexGrid:NodeTypes.Content.Row:properties.alignmentVertical.selectBoxEditor.values.bottom'
+
+Geopard.FlexGrid:Mixin.Row.AlignmentHorizontal.XS:
+  abstract: true
+  superTypes:
+    Geopard.FlexGrid:Mixin.Row.AlignmentHorizontal.Group: true
+  properties:
+    alignmentHorizontal:
+      type: string
+      ui:
+        label: 'Geopard.FlexGrid:Main:size.xs'
+        reloadIfChanged: true
+        inspector:
+          group: 'alignmentHorizontal'
+          editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
+          editorOptions:
+            allowEmpty: true
+            values:
+              flexgrid-start-xs:
+                label: 'Geopard.FlexGrid:NodeTypes.Content.Row:properties.alignmentHorizontal.selectBoxEditor.values.start'
+              flexgrid-end-xs:
+                label: 'Geopard.FlexGrid:NodeTypes.Content.Row:properties.alignmentHorizontal.selectBoxEditor.values.end'
+              flexgrid-center-xs:
+                label: 'Geopard.FlexGrid:NodeTypes.Content.Row:properties.alignmentHorizontal.selectBoxEditor.values.center'
+              flexgrid-around-xs:
+                label: 'Geopard.FlexGrid:NodeTypes.Content.Row:properties.alignmentHorizontal.selectBoxEditor.values.around'
+              flexgrid-between-xs:
+                label: 'Geopard.FlexGrid:NodeTypes.Content.Row:properties.alignmentHorizontal.selectBoxEditor.values.between'
+
+Geopard.FlexGrid:Mixin.Row.AlignmentHorizontal.SM:
+  abstract: true
+  superTypes:
+    Geopard.FlexGrid:Mixin.Row.AlignmentHorizontal.Group: true
+  properties:
+    alignmentHorizontal-sm:
+      type: string
+      ui:
+        label: 'Geopard.FlexGrid:Main:size.sm'
+        reloadIfChanged: true
+        inspector:
+          group: 'alignmentHorizontal'
+          editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
+          editorOptions:
+            allowEmpty: true
+            values:
+              flexgrid-start-sm:
+                label: 'Geopard.FlexGrid:NodeTypes.Content.Row:properties.alignmentHorizontal.selectBoxEditor.values.start'
+              flexgrid-end-sm:
+                label: 'Geopard.FlexGrid:NodeTypes.Content.Row:properties.alignmentHorizontal.selectBoxEditor.values.end'
+              flexgrid-center-sm:
+                label: 'Geopard.FlexGrid:NodeTypes.Content.Row:properties.alignmentHorizontal.selectBoxEditor.values.center'
+              flexgrid-around-sm:
+                label: 'Geopard.FlexGrid:NodeTypes.Content.Row:properties.alignmentHorizontal.selectBoxEditor.values.around'
+              flexgrid-between-sm:
+                label: 'Geopard.FlexGrid:NodeTypes.Content.Row:properties.alignmentHorizontal.selectBoxEditor.values.between'
+
+Geopard.FlexGrid:Mixin.Row.AlignmentHorizontal.MD:
+  abstract: true
+  superTypes:
+    Geopard.FlexGrid:Mixin.Row.AlignmentHorizontal.Group: true
+  properties:
+    alignmentHorizontal-md:
+      type: string
+      ui:
+        label: 'Geopard.FlexGrid:Main:size.md'
+        reloadIfChanged: true
+        inspector:
+          group: 'alignmentHorizontal'
+          editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
+          editorOptions:
+            allowEmpty: true
+            values:
+              flexgrid-start-md:
+                label: 'Geopard.FlexGrid:NodeTypes.Content.Row:properties.alignmentHorizontal.selectBoxEditor.values.start'
+              flexgrid-end-md:
+                label: 'Geopard.FlexGrid:NodeTypes.Content.Row:properties.alignmentHorizontal.selectBoxEditor.values.end'
+              flexgrid-center-md:
+                label: 'Geopard.FlexGrid:NodeTypes.Content.Row:properties.alignmentHorizontal.selectBoxEditor.values.center'
+              flexgrid-around-md:
+                label: 'Geopard.FlexGrid:NodeTypes.Content.Row:properties.alignmentHorizontal.selectBoxEditor.values.around'
+              flexgrid-between-md:
+                label: 'Geopard.FlexGrid:NodeTypes.Content.Row:properties.alignmentHorizontal.selectBoxEditor.values.between'
+
+Geopard.FlexGrid:Mixin.Row.AlignmentHorizontal.LG:
+  abstract: true
+  superTypes:
+    Geopard.FlexGrid:Mixin.Row.AlignmentHorizontal.Group: true
+  properties:
+    alignmentHorizontal-lg:
+      type: string
+      ui:
+        label: 'Geopard.FlexGrid:Main:size.lg'
+        reloadIfChanged: true
+        inspector:
+          group: 'alignmentHorizontal'
+          editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
+          editorOptions:
+            allowEmpty: true
+            values:
+              flexgrid-start-lg:
+                label: 'Geopard.FlexGrid:NodeTypes.Content.Row:properties.alignmentHorizontal.selectBoxEditor.values.start'
+              flexgrid-end-lg:
+                label: 'Geopard.FlexGrid:NodeTypes.Content.Row:properties.alignmentHorizontal.selectBoxEditor.values.end'
+              flexgrid-center-lg:
+                label: 'Geopard.FlexGrid:NodeTypes.Content.Row:properties.alignmentHorizontal.selectBoxEditor.values.center'
+              flexgrid-around-lg:
+                label: 'Geopard.FlexGrid:NodeTypes.Content.Row:properties.alignmentHorizontal.selectBoxEditor.values.around'
+              flexgrid-between-lg:
+                label: 'Geopard.FlexGrid:NodeTypes.Content.Row:properties.alignmentHorizontal.selectBoxEditor.values.between'

@@ -1,0 +1,84 @@
+/*
+CSS Flexible Box Layout Module (full support)
+---
+StrawberryGrid used this method of positioning elements in horizontal and/or vertical stacks.
+Support includes all properties prefixed with flex, as well as display: flex,
+display: inline-flex, align-content, align-items, align-self, justify-content and order.
+---
+Support: https://caniuse.com/flexbox
+*/
+
+@mixin flexbox {
+  display: flex;
+}
+
+@mixin inline-flex {
+  display: inline-flex;
+}
+
+%flexbox { @include flexbox; }
+%inline-flex { @include inline-flex; }
+
+// Flexbox Flex shorthand
+@mixin flex($fg: 1, $fs: null, $fb: null) {
+  $fg-boxflex: $fg;
+  @if type-of($fg) == 'list' {
+    $fg-boxflex: nth($fg, 1);
+  }
+  flex: $fg $fs $fb;
+}
+
+// Flexbox Direction
+@mixin flex-direction($value: row) {
+  flex-direction: $value;
+}
+
+// Flexbox Wrap
+@mixin flex-wrap($value: nowrap) {
+  flex-wrap: $value;
+}
+
+// Flexbox Flow (shorthand)
+@mixin flex-flow($values: (row nowrap)) {
+  flex-flow: $values;
+}
+
+// Flexbox Justify Content
+@mixin justify-content($value: flex-start) {
+  justify-content: $value;
+}
+
+// Flexbox Align Items
+@mixin align-items($value: stretch) {
+  align-items: $value;
+}
+
+// Flexbox Align Self
+@mixin align-self($value: auto) {
+  align-self: $value;
+}
+
+// Flexbox Align Content
+@mixin align-content($value: stretch) {
+  align-content: $value;
+}
+
+// Flexbox Grow
+@mixin flex-grow($int: 0) {
+  flex-grow: $int;
+}
+
+// Flexbox Shrink
+@mixin flex-shrink($int: 1) {
+  flex-shrink: $int;
+}
+
+// Flexbox Basis
+@mixin flex-basis($value: auto) {
+  flex-basis: $value;
+}
+
+// Flexbox Order
+@mixin order($int: 0) {
+  order: $int;
+}

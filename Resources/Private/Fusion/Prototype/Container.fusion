@@ -1,0 +1,5 @@
+prototype(Geopard.FlexGrid:Prototype.Container) < prototype(Neos.Fusion:Component) {
+    renderer = Neos.Fusion:DataStructure {
+        container = 'flexgrid-container-fluid'
+    }
+}

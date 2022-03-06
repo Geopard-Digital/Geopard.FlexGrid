@@ -1,0 +1,32 @@
+{
+    "name": "geopard/flexgrid",
+    "description": "A simple but full featured flexbox grid Package for Neos CMS.",
+    "type": "neos-plugin",
+    "license": "MIT",
+    "keywords": [
+        "neoscms",
+        "neos-plugin",
+        "fusion",
+        "flex",
+        "grid"
+    ],
+    "authors": [
+        {
+            "name": "Rene Rehme",
+            "email": "contact@renerehme.dev"
+        },
+        {
+            "name": "Geopard Digital",
+            "email": "info@geopard-digital.de"
+        }
+    ],
+    "require": {
+        "neos/neos": ">=5.3"
+    },
+    "extra": {
+        "installer-name": "Geopard.FlexGrid",
+        "neos": {
+            "package-key": "Geopard.FlexGrid"
+        }
+    }
+}

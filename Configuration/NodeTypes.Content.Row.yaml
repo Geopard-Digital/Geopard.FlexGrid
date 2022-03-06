@@ -1,0 +1,16 @@
+Geopard.FlexGrid:Content.Row:
+  superTypes:
+    Neos.Neos:Content: true
+    Neos.Neos:ContentCollection: true
+    Geopard.FlexGrid:Mixin.Row.AlignmentHorizontal: true
+    Geopard.FlexGrid:Mixin.Row.AlignmentVertical: true
+  ui:
+    label: i18n
+    icon: 'fas fa-columns'
+    position: 100
+    group: 'structure'
+    inlineEditable: true
+  constraints:
+    nodeTypes:
+      '*': false
+      Geopard.FlexGrid:Content.Column: true

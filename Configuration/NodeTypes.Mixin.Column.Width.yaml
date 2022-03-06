@@ -1,0 +1,191 @@
+Geopard.FlexGrid:Mixin.Column.Width:
+  abstract: true
+  superTypes:
+    Geopard.FlexGrid:Mixin.Column.Width.XS: true
+    Geopard.FlexGrid:Mixin.Column.Width.SM: true
+    Geopard.FlexGrid:Mixin.Column.Width.MD: true
+    Geopard.FlexGrid:Mixin.Column.Width.LG: true
+
+Geopard.FlexGrid:Mixin.Column.Width.Group:
+  abstract: true
+  ui:
+    inspector:
+      groups:
+        width:
+          label: 'Geopard.FlexGrid:NodeTypes.Content.Column:groups.width'
+
+Geopard.FlexGrid:Mixin.Column.Width.XS:
+  abstract: true
+  superTypes:
+    Geopard.FlexGrid:Mixin.Column.Width.Group: true
+  properties:
+    width:
+      type: string
+      defaultValue: 'flexgrid-col-xs-12'
+      ui:
+        label: 'Geopard.FlexGrid:Main:size.xs'
+        reloadIfChanged: true
+        inspector:
+          group: 'width'
+          editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
+          editorOptions:
+            allowEmpty: false
+            values:
+              flexgrid-col-xs-1:
+                label: '1/12'
+              flexgrid-col-xs-2:
+                label: '2/12'
+              flexgrid-col-xs-3:
+                label: '3/12'
+              flexgrid-col-xs-4:
+                label: '4/12'
+              flexgrid-col-xs-5:
+                label: '5/12'
+              flexgrid-col-xs-6:
+                label: '6/12'
+              flexgrid-col-xs-7:
+                label: '7/12'
+              flexgrid-col-xs-8:
+                label: '8/12'
+              flexgrid-col-xs-9:
+                label: '9/12'
+              flexgrid-col-xs-10:
+                label: '10/12'
+              flexgrid-col-xs-11:
+                label: '11/12'
+              flexgrid-col-xs-12:
+                label: '12/12'
+              flexgrid-col-xs:
+                label: 'auto'
+
+Geopard.FlexGrid:Mixin.Column.Width.SM:
+  abstract: true
+  superTypes:
+    Geopard.FlexGrid:Mixin.Column.Width.Group: true
+  properties:
+    width-sm:
+      type: string
+      defaultValue: 'flexgrid-col-sm'
+      ui:
+        label: 'Geopard.FlexGrid:Main:size.sm'
+        reloadIfChanged: true
+        inspector:
+          group: 'width'
+          editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
+          editorOptions:
+            allowEmpty: true
+            values:
+              flexgrid-col-sm-1:
+                label: '1/12'
+              flexgrid-col-sm-2:
+                label: '2/12'
+              flexgrid-col-sm-3:
+                label: '3/12'
+              flexgrid-col-sm-4:
+                label: '4/12'
+              flexgrid-col-sm-5:
+                label: '5/12'
+              flexgrid-col-sm-6:
+                label: '6/12'
+              flexgrid-col-sm-7:
+                label: '7/12'
+              flexgrid-col-sm-8:
+                label: '8/12'
+              flexgrid-col-sm-9:
+                label: '9/12'
+              flexgrid-col-sm-10:
+                label: '10/12'
+              flexgrid-col-sm-11:
+                label: '11/12'
+              flexgrid-col-sm-12:
+                label: '12/12'
+              flexgrid-col-sm:
+                label: 'auto'
+
+Geopard.FlexGrid:Mixin.Column.Width.MD:
+  abstract: true
+  superTypes:
+    Geopard.FlexGrid:Mixin.Column.Width.Group: true
+  properties:
+    width-md:
+      type: string
+      defaultValue: 'flexgrid-col-md'
+      ui:
+        label: 'Geopard.FlexGrid:Main:size.md'
+        reloadIfChanged: true
+        inspector:
+          group: 'width'
+          editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
+          editorOptions:
+            allowEmpty: true
+            values:
+              flexgrid-col-md-1:
+                label: '1/12'
+              flexgrid-col-md-2:
+                label: '2/12'
+              flexgrid-col-md-3:
+                label: '3/12'
+              flexgrid-col-md-4:
+                label: '4/12'
+              flexgrid-col-md-5:
+                label: '5/12'
+              flexgrid-col-md-6:
+                label: '6/12'
+              flexgrid-col-md-7:
+                label: '7/12'
+              flexgrid-col-md-8:
+                label: '8/12'
+              flexgrid-col-md-9:
+                label: '9/12'
+              flexgrid-col-md-10:
+                label: '10/12'
+              flexgrid-col-md-11:
+                label: '11/12'
+              flexgrid-col-md-12:
+                label: '12/12'
+              flexgrid-col-md:
+                label: 'auto'
+
+Geopard.FlexGrid:Mixin.Column.Width.LG:
+  abstract: true
+  superTypes:
+    Geopard.FlexGrid:Mixin.Column.Width.Group: true
+  properties:
+    width-lg:
+      type: string
+      defaultValue: 'flexgrid-col-lg'
+      ui:
+        label: 'Geopard.FlexGrid:Main:size.lg'
+        reloadIfChanged: true
+        inspector:
+          group: 'width'
+          editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
+          editorOptions:
+            allowEmpty: true
+            values:
+              flexgrid-col-lg-1:
+                label: '1/12'
+              flexgrid-col-lg-2:
+                label: '2/12'
+              flexgrid-col-lg-3:
+                label: '3/12'
+              flexgrid-col-lg-4:
+                label: '4/12'
+              flexgrid-col-lg-5:
+                label: '5/12'
+              flexgrid-col-lg-6:
+                label: '6/12'
+              flexgrid-col-lg-7:
+                label: '7/12'
+              flexgrid-col-lg-8:
+                label: '8/12'
+              flexgrid-col-lg-9:
+                label: '9/12'
+              flexgrid-col-lg-10:
+                label: '10/12'
+              flexgrid-col-lg-11:
+                label: '11/12'
+              flexgrid-col-lg-12:
+                label: '12/12'
+              flexgrid-col-lg:
+                label: 'auto'

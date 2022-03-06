@@ -1,0 +1,72 @@
+prototype(Geopard.FlexGrid:Prototype.Column) < prototype(Neos.Fusion:Component) {
+    width = Neos.Fusion:DataStructure {
+        xs = ${q(node).property('width')}
+        sm = ${q(node).property('width-sm')}
+        md = ${q(node).property('width-md')}
+        lg = ${q(node).property('width-lg')}
+    }
+
+    offset = Neos.Fusion:DataStructure {
+        xs = ${q(node).property('offset')}
+        sm = ${q(node).property('offset-sm')}
+        md = ${q(node).property('offset-md')}
+        lg = ${q(node).property('offset-lg')}
+    }
+
+    order = Neos.Fusion:DataStructure {
+        xs = ${q(node).property('order')}
+        sm = ${q(node).property('order-sm')}
+        md = ${q(node).property('order-md')}
+        lg = ${q(node).property('order-lg')}
+    }
+
+    renderer = Neos.Fusion:DataStructure {
+        width = Neos.Fusion:Join {
+            @glue = ' '
+
+            xs = ${props.width.xs == 'auto' ? null : props.width.xs}
+            xs.@if.props = ${props.width.xs}
+
+            sm = ${props.width.sm == 'auto' ? null : props.width.sm}
+            sm.@if.props = ${props.width.sm}
+
+            md = ${props.width.md == 'auto' ? null : props.width.md}
+            md.@if.props = ${props.width.md}
+
+            lg = ${props.width.lg == 'auto' ? null : props.width.lg}
+            lg.@if.props = ${props.width.lg}
+        }
+
+        offset = Neos.Fusion:Join {
+            @glue = ' '
+
+            xs = ${props.offset.xs}
+            xs.@if.props = ${props.offset.xs}
+
+            sm = ${props.offset.sm}
+            sm.@if.props = ${props.offset.sm}
+
+            md = ${props.offset.md}
+            md.@if.props = ${props.offset.md}
+
+            lg = ${props.offset.lg}
+            lg.@if.props = ${props.offset.lg}
+        }
+
+        order = Neos.Fusion:Join {
+            @glue = ' '
+
+            xs = ${props.order.xs}
+            xs.@if.props = ${props.order.xs}
+
+            sm = ${props.order.sm}
+            sm.@if.props = ${props.order.sm}
+
+            md = ${props.order.md}
+            md.@if.props = ${props.order.md}
+
+            lg = ${props.order.lg}
+            lg.@if.props = ${props.order.lg}
+        }
+    }
+}

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file original="" product-name="Geopard.FlexGrid" source-language="de" datatype="plaintext">
+        <body>
+            <trans-unit id="size.xs" xml:space="preserve">
+                <source>Smartphone</source>
+            </trans-unit>
+            <trans-unit id="size.sm" xml:space="preserve">
+                <source>Smartphone Landscape</source>
+            </trans-unit>
+            <trans-unit id="size.md" xml:space="preserve">
+                <source>Tablet</source>
+            </trans-unit>
+            <trans-unit id="size.lg" xml:space="preserve">
+                <source>Desktops</source>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

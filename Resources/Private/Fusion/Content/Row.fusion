@@ -1,0 +1,23 @@
+prototype(Geopard.FlexGrid:Content.Row) < prototype(Neos.Neos:ContentComponent) {
+    neosBackendClass = 'geopard-flexgrid'
+    rowClass = Geopard.FlexGrid:Prototype.Row
+
+    renderer = afx`<div class={props.rowClass}><Neos.Neos:ContentCollectionRenderer /></div>`
+    renderer.@process.wrap = afx`<div class={props.neosBackendClass}><Neos.Fusion:Augmenter data-__neos-insertion-anchor>{value}</Neos.Fusion:Augmenter></div>`
+    renderer.@process.wrap.@if.backend = ${node.context.inBackend}
+
+    @cache {
+        mode = 'cached'
+
+        entryIdentifier {
+            node = ${node}
+            documentNode = ${documentNode}
+            editPreviewMode = ${node.context.currentRenderingMode.name}
+        }
+
+        entryTags {
+            1 = ${Neos.Caching.nodeTag(node)}
+            2 = ${Neos.Caching.descendantOfTag(node)}
+        }
+    }
+}

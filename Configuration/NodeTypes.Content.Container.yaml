@@ -1,0 +1,10 @@
+Geopard.FlexGrid:Content.Container:
+  superTypes:
+    Neos.Neos:Content: true
+    Neos.Neos:ContentCollection: true
+  ui:
+    label: i18n
+    icon: 'fas fa-arrows-h'
+    position: 100
+    group: 'structure'
+    inlineEditable: true

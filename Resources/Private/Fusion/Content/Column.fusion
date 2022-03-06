@@ -1,0 +1,19 @@
+prototype(Geopard.FlexGrid:Content.Column) < prototype(Neos.Neos:ContentComponent) {
+    class = Geopard.FlexGrid:Prototype.Column
+    renderer = afx`<div class={props.class}><Neos.Neos:ContentCollectionRenderer /></div>`
+
+    @cache {
+        mode = 'cached'
+
+        entryIdentifier {
+            node = ${node}
+            documentNode = ${documentNode}
+            editPreviewMode = ${node.context.currentRenderingMode.name}
+        }
+
+        entryTags {
+            1 = ${Neos.Caching.nodeTag(node)}
+            2 = ${Neos.Caching.descendantOfTag(node)}
+        }
+    }
+}

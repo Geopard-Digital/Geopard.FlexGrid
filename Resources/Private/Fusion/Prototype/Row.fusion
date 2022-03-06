@@ -1,0 +1,51 @@
+prototype(Geopard.FlexGrid:Prototype.Row) < prototype(Neos.Fusion:Component) {
+    alignmentVertical = Neos.Fusion:DataStructure {
+        xs = ${q(node).property('alignmentVertical')}
+        sm = ${q(node).property('alignmentVertical-sm')}
+        md = ${q(node).property('alignmentVertical-md')}
+        lg = ${q(node).property('alignmentVertical-lg')}
+    }
+
+    alignmentHorizontal = Neos.Fusion:DataStructure {
+        xs = ${q(node).property('alignmentHorizontal')}
+        sm = ${q(node).property('alignmentHorizontal-sm')}
+        md = ${q(node).property('alignmentHorizontal-md')}
+        lg = ${q(node).property('alignmentHorizontal-lg')}
+    }
+
+    renderer = Neos.Fusion:DataStructure {
+        element = 'flexgrid-row'
+
+        alignmentVertical = Neos.Fusion:Join {
+            @glue = ' '
+
+            xs = ${props.alignmentVertical.xs}
+            xs.@if.props = ${props.alignmentVertical.xs}
+
+            sm = ${props.alignmentVertical.sm}
+            sm.@if.props = ${props.alignmentVertical.sm}
+
+            md = ${props.alignmentVertical.md}
+            md.@if.props = ${props.alignmentVertical.md}
+
+            lg = ${props.alignmentVertical.lg}
+            lg.@if.props = ${props.alignmentVertical.lg}
+        }
+
+        alignmentHorizontal = Neos.Fusion:Join {
+            @glue = ' '
+
+            xs = ${props.alignmentHorizontal.xs}
+            xs.@if.props = ${props.alignmentHorizontal.xs}
+
+            sm = ${props.alignmentHorizontal.sm}
+            sm.@if.props = ${props.alignmentHorizontal.sm}
+
+            md = ${props.alignmentHorizontal.md}
+            md.@if.props = ${props.alignmentHorizontal.md}
+
+            lg = ${props.alignmentHorizontal.lg}
+            lg.@if.props = ${props.alignmentHorizontal.lg}
+        }
+    }
+}
