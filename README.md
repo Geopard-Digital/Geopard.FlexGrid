@@ -14,7 +14,7 @@ Geopard.FlexGrid allows different column sizes to be specified for xs, sm, md, a
 - Column position (vertical & horizontal)
 
 ![Preview](.github/preview.png?raw=true "Preview")
-*Note that the paddings and colors shown in this preview are only for demo purposes.
+*Note that the row padding and colors shown in this preview are for demo purposes only.
 
 ## Installation
 ```
