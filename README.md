@@ -1,6 +1,6 @@
 # Geopard.FlexGrid Package for Neos CMS #
 
-A simple but full featured flexbox grid Package for Neos CMS. It's using a 12 grid layout and unique class names.
+A simple but full featured flexbox grid Package for Neos <i>CMS</i>. It's using a 12 grid layout and unique class names.
 
 ## Why this package?
 There are already numerous Neos packages for creating a grid. However, the packages we tested didn't meet all of our needs. This package can be used to create a grid with features listed below. The settings are numerous, but do not have to be made if the use case has to be simple.
