@@ -1,6 +1,6 @@
 {
     "name": "geopard/flexgrid",
-    "description": "A simple but full featured flexbox grid Package for Neos CMS.",
+    "description": "A simple but full featured flexbox grid Package for Neos <i>CMS</i>.",
     "type": "neos-plugin",
     "license": "MIT",
     "keywords": [
